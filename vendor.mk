@@ -1,8 +1,12 @@
 # Export rom name
-export VENDOR := pa
+export VENDOR := venture
 
 # Version info
-ROM_VERSION_MAJOR := 4
-ROM_VERSION_MINOR := 6
+ROM_VERSION_MAJOR := 0
+ROM_VERSION_MINOR := 12
 ROM_VERSION_MAINTENANCE := 
-ROM_VERSION_TAG := BETA2
+# B# Beta
+# A# Alpha
+# T# Test
+# R# Release
+ROM_VERSION_TAG := A2

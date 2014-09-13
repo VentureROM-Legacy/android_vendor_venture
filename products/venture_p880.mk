@@ -14,27 +14,27 @@
 
 # Check for target product
 
-ifeq (pa_p880,$(TARGET_PRODUCT))
+ifeq (venture_p880,$(TARGET_PRODUCT))
 
 # Define PA bootanimation size
 PARANOID_BOOTANIMATION_NAME := XHDPI
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := venture_xhdpi
 
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/lge/p880/full_p880.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_p880
+PRODUCT_NAME := venture_p880
 PRODUCT_DEVICE := p880
 PRODUCT_BRAND := lge
 PRODUCT_MANUFACTURER := lge

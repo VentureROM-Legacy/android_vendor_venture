@@ -14,26 +14,26 @@
 
 # Check for target product
 
-ifeq (pa_moto_msm8960dt,$(TARGET_PRODUCT))
+ifeq (venture_moto_msm8960dt,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := venture_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/motorola/moto_msm8960dt/full_moto_msm8960dt.mk)
 
 # Override AOSP build properties
 PRODUCT_DEVICE := moto_msm8960dt
-PRODUCT_NAME := pa_moto_msm8960dt
+PRODUCT_NAME := venture_moto_msm8960dt
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := MOTOROLA MSM8960DT
 PRODUCT_MANUFACTURER := motorola

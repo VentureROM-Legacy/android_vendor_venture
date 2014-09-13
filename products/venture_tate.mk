@@ -13,22 +13,22 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_tate,$(TARGET_PRODUCT))
+ifeq (venture_tate,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_tvdpi
+OVERLAY_TARGET := venture_tvdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Include ParanoidAndroid common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/amazon/tate/full_tate.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_tate
+PRODUCT_NAME := venture_tate
 PRODUCT_DEVICE := tate
 PRODUCT_RELEASE_NAME := KindleFireHD
 PRODUCT_BRAND := google

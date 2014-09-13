@@ -14,25 +14,25 @@
 
 # Check for target product
 
-ifeq (pa_serranoltexx,$(TARGET_PRODUCT))
+ifeq (venture_serranoltexx,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_hdpi
+OVERLAY_TARGET := venture_hdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/serranoltexx/full_serranoltexx.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_serranoltexx
+PRODUCT_NAME := venture_serranoltexx
 PRODUCT_DEVICE := serranoltexx
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung

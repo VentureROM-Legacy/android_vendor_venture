@@ -14,10 +14,10 @@
 
 # Check for target product
 
-ifeq (pa_v500,$(TARGET_PRODUCT))
+ifeq (venture_v500,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := venture_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -25,14 +25,14 @@ PREFS_FROM_SOURCE ?= false
 # Inherit telephony common stuff
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/lge/v500/v500.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := v500
-PRODUCT_NAME := pa_v500
+PRODUCT_NAME := venture_v500
 PRODUCT_BRAND := LGE
 PRODUCT_MODEL := LG-V500
 PRODUCT_MANUFACTURER := lge

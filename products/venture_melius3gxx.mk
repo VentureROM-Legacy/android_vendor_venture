@@ -14,25 +14,25 @@
 
 # Check for target product
 
-ifeq (pa_melius3gxx,$(TARGET_PRODUCT))
+ifeq (venture_melius3gxx,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := venture_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/melius3gxx/full_melius3gxx.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_melius3gxx
+PRODUCT_NAME := venture_melius3gxx
 PRODUCT_DEVICE := melius3gxx
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung

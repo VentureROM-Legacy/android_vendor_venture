@@ -13,29 +13,28 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_n7100,$(TARGET_PRODUCT))
+ifeq (venture_n7100,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := venture_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/venture/configs/telephony.mk)
 
 # Include AOSPA common configuration
-include vendor/pa/main.mk
+include vendor/venture/main.mk
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/n7100/full_n7100.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_n7100
+PRODUCT_NAME := venture_n7100
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := Galaxy Note II
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=t03gxx TARGET_DEVICE=t03g BUILD_FINGERPRINT="samsung/t03gxx/t03g:4.1.1/JRO03C/N7100XXALJ3:user/release-keys" PRIVATE_BUILD_DESC="t03gxx-user 4.1.1 JRO03C N7100XXALJ3 release-keys"
 
 endif
-

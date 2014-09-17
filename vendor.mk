@@ -9,4 +9,5 @@ ROM_VERSION_MAINTENANCE :=
 # A# Alpha
 # T# Test
 # R# Release
+# EXP# Experimental/test version. WILL DESTROY KITTUHNS
 ROM_VERSION_TAG := A1

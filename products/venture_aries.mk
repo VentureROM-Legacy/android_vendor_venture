@@ -1,4 +1,4 @@
-# Copyright (C) 2014 ParanoidAndroid Project
+# Copyright (C) 2014 Paranoid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +13,10 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (venture_enrc2b,$(TARGET_PRODUCT))
+ifeq (venture_aries,$(TARGET_PRODUCT))
+
+# Define VENTURE bootanimation size
+PARANOID_BOOTANIMATION_NAME := XHDPI
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := venture_xhdpi
@@ -27,18 +30,15 @@ $(call inherit-product, vendor/venture/configs/telephony.mk)
 # Include AOSPA common configuration
 include vendor/venture/main.mk
 
-# Inherit device configuration
-$(call inherit-product, device/htc/enrc2b/full_enrc2b.mk)
+# Inherit AOSP device configuration
+$(call inherit-product, device/xiaomi/aries/full_aries.mk)
 
 # Override AOSP build properties
-PRODUCT_DEVICE := enrc2b
-PRODUCT_NAME := venture_enrc2b
-PRODUCT_BRAND := htc_europe
-PRODUCT_MODEL := One X+
-PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=enrc2b \
-    BUILD_FINGERPRINT="htc_europe/enrc2b/enrc2b:4.3/JRO03C/125529.22:user/release-keys" \
-    PRIVATE_BUILD_DESC="3.14.401.22 CL125529 release-keys"
+PRODUCT_NAME := venture_aries
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := MI 2
+PRODUCT_MANUFACTURER := XIAOMI
+TARGET_VENDOR_DEVICE_NAME := aries
+PRODUCT_GMS_CLIENTID_BASE := android-aries
 
 endif

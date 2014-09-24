@@ -12,14 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (venture_a510,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_a510.mk
-endif
-ifeq (venture_a700,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_a700.mk
-endif
 ifeq (venture_amami,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_amami.mk
+endif
+ifeq (venture_aries,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_aries.mk
 endif
 ifeq (venture_d2lte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_d2lte.mk
@@ -39,14 +36,11 @@ endif
 ifeq (venture_d803,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_d803.mk
 endif
-ifeq (venture_dlx,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_dlx.mk
+ifeq (venture_d851,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_d851.mk
 endif
 ifeq (venture_edison,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_edison.mk
-endif
-ifeq (venture_enrc2b,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_enrc2b.mk
 endif
 ifeq (venture_evita,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_evita.mk
@@ -78,20 +72,8 @@ endif
 ifeq (venture_hercules,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_hercules.mk
 endif
-ifeq (venture_hikari,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_hikari.mk
-endif
-ifeq (venture_hlte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_hlte.mk
-endif
 ifeq (venture_honami,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_honami.mk
-endif
-ifeq (venture_i605,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_i605.mk
-endif
-ifeq (venture_i9082,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_i9082.mk
 endif
 ifeq (venture_i9100,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_i9100.mk
@@ -105,17 +87,8 @@ endif
 ifeq (venture_i9500,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_i9500.mk
 endif
-ifeq (venture_jem,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_jem.mk
-endif
-ifeq (venture_jemlte,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_jemlte.mk
-endif
 ifeq (venture_jflte,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_jflte.mk
-endif
-ifeq (venture_l900,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_l900.mk
 endif
 ifeq (venture_ls980,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_ls980.mk
@@ -138,23 +111,11 @@ endif
 ifeq (venture_maserati,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_maserati.mk
 endif
-ifeq (venture_melius3gxx,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_melius3gxx.mk
-endif
-ifeq (venture_meliusltexx,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_meliusltexx.mk
-endif
-ifeq (venture_mint,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_mint.mk
-endif
 ifeq (venture_moto_msm8960,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_moto_msm8960.mk
 endif
 ifeq (venture_moto_msm8960_jbbl,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_moto_msm8960_jbbl.mk
-endif
-ifeq (venture_moto_msm8960dt,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_moto_msm8960dt.mk
 endif
 ifeq (venture_n1,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_n1.mk
@@ -186,15 +147,6 @@ endif
 ifeq (venture_p3110,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_p3110.mk
 endif
-ifeq (venture_p880,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_p880.mk
-endif
-ifeq (venture_serrano3gxx,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_serrano3gxx.mk
-endif
-ifeq (venture_serranoltexx,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_serranoltexx.mk
-endif
 ifeq (venture_sirius,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_sirius.mk
 endif
@@ -204,23 +156,17 @@ endif
 ifeq (venture_spyder,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_spyder.mk
 endif
+ifeq (venture_taoshan,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_taoshan.mk
+endif
 ifeq (venture_targa,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_targa.mk
-endif
-ifeq (venture_tate,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_tate.mk
-endif
-ifeq (venture_tf201,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_tf201.mk
 endif
 ifeq (venture_togari,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_togari.mk
 endif
 ifeq (venture_umts_spyder,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_umts_spyder.mk
-endif
-ifeq (venture_v500,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_v500.mk
 endif
 ifeq (venture_ville,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/venture_ville.mk

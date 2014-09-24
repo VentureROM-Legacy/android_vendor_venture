@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,10 @@
 
 # Check for target product
 
-ifeq (venture_hikari,$(TARGET_PRODUCT))
+ifeq (venture_taoshan,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := venture_xhdpi
+OVERLAY_TARGET := venture_hdpi
 
 PREFS_FROM_SOURCE ?= false
 
@@ -28,14 +28,15 @@ $(call inherit-product, vendor/venture/configs/telephony.mk)
 include vendor/venture/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/sony/hikari/full_hikari.mk)
+$(call inherit-product, device/sony/taoshan/cm.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := venture_hikari
-PRODUCT_DEVICE := hikari
-PRODUCT_BRAND := Sony
+PRODUCT_NAME := venture_taoshan
+PRODUCT_DEVICE := taoshan
+PRODUCT_BRAND := sony
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia Acro S
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=LT26w_1266-3204 PRODUCT_DEVICE=hikari BUILD_FINGERPRINT=SEMC/LT26w_1266-3204/LT26w:4.0.4/6.1.A.2.50/zfd_zw:user/release-keys PRIVATE_BUILD_DESC="LT26w-user 4.0.4 6.1.A.2.50 zfd_zw test-keys"
+PRODUCT_MODEL := C2105
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C2105_1272-2267 BUILD_FINGERPRINT="Sony/C2105_1272-2267/C2105:4.2.2/15.3.A.1.14/Android.1014:user/release-keys" \
+PRIVATE_BUILD_DESC="C2105-user 4.2.2 JDQ39 Android.1014 test-keys"
 
 endif

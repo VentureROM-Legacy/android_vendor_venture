@@ -13,13 +13,11 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (venture_dlx,$(TARGET_PRODUCT))
 
-# Define PA bootanimation size
-PARANOID_BOOTANIMATION_NAME := XHDPI
+ifeq (venture_d851,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := venture_xhdpi
+OVERLAY_TARGET := venture_xxhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
@@ -31,18 +29,15 @@ $(call inherit-product, vendor/venture/configs/telephony.mk)
 include vendor/venture/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/htc/dlx/full_dlx.mk)
+$(call inherit-product, device/lge/d851/d851.mk)
 
-# Override AOSP build properties
-PRODUCT_DEVICE := dlx
-PRODUCT_NAME := venture_dlx
-PRODUCT_BRAND := Verizon
-PRODUCT_MODEL := HTC6435LVW
-PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=dlx \
-    BUILD_ID=JDQ39 \
-    BUILD_FINGERPRINT=htc/verizon_wwe/dlx:4.2.2/JDQ39/277065.4:user/release-keys \
-    PRIVATE_BUILD_DESC="3.06.605.4 CL277065 release-keys"
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := d851
+PRODUCT_NAME := venture_d851
+PRODUCT_BRAND := LGE
+PRODUCT_MODEL := LG-D851
+PRODUCT_MANUFACTURER := lge
+
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_DEVICE="g3" PRODUCT_NAME="g3_tmo_us" BUILD_FINGERPRINT="lge/g3_tmo_us/g3:4.4.2/KVT49L.D85110c/D85110c.1403267110:user/release-keys" PRIVATE_BUILD_DESC="g3_tmo_us-user 4.4.2 KVT49L.D85110c D85110c.1403267110 release-keys"
 
 endif

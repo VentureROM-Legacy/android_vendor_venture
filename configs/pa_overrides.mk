@@ -26,10 +26,10 @@ PRODUCT_PACKAGES += \
 #        ParanoidPreferences
 #endif
 
-# Include ParanoidOTA
+# Include VentureOTA
 ifneq ($(NO_OTA_BUILD),true)
     PRODUCT_PACKAGES += \
-        ParanoidOTA
+        VentureOTA
 endif
 
 # Extra properties

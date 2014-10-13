@@ -29,7 +29,7 @@ PRODUCT_PACKAGES += \
 # Include VentureOTA
 ifneq ($(NO_OTA_BUILD),true)
     PRODUCT_PACKAGES += \
-        Venture
+        VentureOTA
 endif
 
 # Extra properties

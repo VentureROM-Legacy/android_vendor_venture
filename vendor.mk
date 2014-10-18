@@ -3,7 +3,11 @@ export VENDOR := venture
 
 # Version info
 ROM_VERSION_MAJOR := 0
-ROM_VERSION_MINOR := 23
+ROM_VERSION_MINOR := 24
 ROM_VERSION_MAINTENANCE := 
-# R Revision WILL DESTROY KITTUHNS
-ROM_VERSION_TAG := R4
+# B# Beta
+# A# Alpha
+# T# Test
+# R# Release
+# EXP# Experimental/test version. WILL DESTROY KITTUHNS
+ROM_VERSION_TAG := A4
